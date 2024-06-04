@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:media_booster/view/home/home_screen.dart';
-import 'package:media_booster/view/splesh/splesh_screen.dart';
+import 'package:media_booster/screen/view/home/home_screen.dart';
+import 'package:media_booster/screen/view/splesh/splesh_screen.dart';
 
 void main() {
   runApp(const MyApp());

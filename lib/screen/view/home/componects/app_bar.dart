@@ -12,7 +12,7 @@ Row homeAppBar(double width) {
             radius: 22,
           ),
           SizedBox(
-            width: width*0.05,
+            width: width * 0.05,
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,16 +36,16 @@ Row homeAppBar(double width) {
         ],
       ),
       SizedBox(
-        width: 110,
+        width: width*0.3,
         child: Row(
           children: [
             const Icon(Icons.equalizer),
             SizedBox(
-              width: width*0.05,
+              width: width * 0.05,
             ),
             const Icon(Icons.notifications),
             SizedBox(
-              width: width*0.05,
+              width: width * 0.05,
             ),
             const Icon(Icons.settings),
           ],

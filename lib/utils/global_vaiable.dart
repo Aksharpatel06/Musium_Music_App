@@ -1,3 +1,3 @@
-import 'dart:ui';
+import '../screen/modal/continue_modal.dart';
 
-final primaryColor = Color(0xff5be4e1);
+ContinueModal? continueModal;
