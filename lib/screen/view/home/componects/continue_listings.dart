@@ -24,11 +24,11 @@ Column continueListings(double height,double width) {
       ),
       GridView.builder(
         shrinkWrap: true,
-        itemCount: ContinueList.length,
+        itemCount: continueList.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, mainAxisExtent: 70),
         itemBuilder: (context, index) {
-          homeModal = HomeModal.setdata(ContinueList[index]);
+          homeModal = HomeModal.setdata(continueList[index]);
           return Padding(
             padding: const EdgeInsets.symmetric(vertical: 4.0,horizontal: 4),
             child: Container(

@@ -1,6 +1,6 @@
 import 'package:flutter/animation.dart';
 
-List TopMixesList=[
+List topMixesList=[
   {
     'img':'asset/img/top mixes/chill.png',
     'name':'Chill Mix',
