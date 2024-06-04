@@ -7,6 +7,7 @@ import '../../../modal/continue_modal.dart';
 
 Column continueListings(double height,double width) {
   return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       SizedBox(
         height: height * 0.04,
@@ -27,7 +28,7 @@ Column continueListings(double height,double width) {
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, mainAxisExtent: 70),
         itemBuilder: (context, index) {
-          continueModal = ContinueModal.setdata(ContinueList[index]);
+          homeModal = HomeModal.setdata(ContinueList[index]);
           return Padding(
             padding: const EdgeInsets.symmetric(vertical: 4.0,horizontal: 4),
             child: Container(
@@ -41,13 +42,13 @@ Column continueListings(double height,double width) {
                     borderRadius: BorderRadius.circular(8),
                     child: SizedBox(
                         height: height * 0.08,
-                        child: Image.asset(continueModal!.img,fit: BoxFit.cover,)),
+                        child: Image.asset(homeModal!.img,fit: BoxFit.cover,)),
                   ),
                   SizedBox(
                     width: width * 0.02,
                   ),
                   Text(
-                    continueModal!.name,
+                    homeModal!.name,
                     textAlign: TextAlign.start,
                     style: GoogleFonts.josefinSans(
                       fontWeight: FontWeight.w500,

@@ -6,12 +6,11 @@ import 'componets/app_logo.dart';
 import 'componets/app_name.dart';
 
 class SpleshScreen extends StatelessWidget {
-   const SpleshScreen({super.key, this.height, this.width});
-
-  final dynamic height, width;
+   const SpleshScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
     Timer(const Duration(seconds: 5), () {
       Navigator.of(context).pushReplacementNamed('/home');
     });

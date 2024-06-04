@@ -11,14 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/':(context) => SpleshScreen(height: height,width: width,),
-        '/home':(context) => HomeScreen(height: height,width: width,),
+        '/':(context) => const SpleshScreen(),
+        '/home':(context) => const HomeScreen(),
       },
     );
   }

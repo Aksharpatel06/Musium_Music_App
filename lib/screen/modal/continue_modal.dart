@@ -1,11 +1,14 @@
-class ContinueModal{
+import 'package:flutter/material.dart';
+
+class HomeModal{
   String img;
   String name;
+  Color? color;
 
-  ContinueModal({required this.img,required this.name});
+  HomeModal({required this.img,required this.name,this.color});
 
-  factory ContinueModal.setdata(Map m1)
+  factory HomeModal.setdata(Map m1)
   {
-    return ContinueModal(img: m1['img'], name: m1['name']);
+    return HomeModal(img: m1['img'], name: m1['name'],color: m1['color']);
   }
 }
