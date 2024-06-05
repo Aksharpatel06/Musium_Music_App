@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:media_booster/screen/view/home/home_screen.dart';
+import 'package:media_booster/screen/view/intro/intro_screen.dart';
 import 'package:media_booster/screen/view/splesh/splesh_screen.dart';
 
 void main() {
@@ -10,12 +11,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
     return MaterialApp(
+      // theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
       routes: {
         '/':(context) => const SpleshScreen(),
+        '/intro':(context) => const IntroScreen(),
         '/home':(context) => const HomeScreen(),
       },
     );

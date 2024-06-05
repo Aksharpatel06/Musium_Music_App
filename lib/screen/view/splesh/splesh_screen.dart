@@ -12,7 +12,7 @@ class SpleshScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     Timer(const Duration(seconds: 5), () {
-      Navigator.of(context).pushReplacementNamed('/home');
+      Navigator.of(context).pushReplacementNamed('/intro');
     });
     return Scaffold(
       body: Center(

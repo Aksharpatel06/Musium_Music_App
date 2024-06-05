@@ -70,6 +70,7 @@ flutter:
     - asset/img/listen img/
     - asset/img/top mixes/
     - asset/img/recent listen/
+    - asset/img/intro/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
