@@ -12,24 +12,24 @@ Widget getNextButton(BuildContext context, double width, double height) {
         width: width * 0.9,
         height: height * 0.08,
         decoration: ShapeDecoration(
-          color: const Color(0xFF059FB4),
+          color: Colors.cyan.shade400,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50),
           ),
-          shadows: const [
-            BoxShadow(
-              color: Color(0xFF39C0D4),
-              blurRadius: 10,
-              spreadRadius: 0.50,
-            )
-          ],
+          // shadows:  [
+          //   BoxShadow(
+          //     color: primaryColor,
+          //     blurRadius: 10,
+          //     spreadRadius: 0.50,
+          //   )
+          // ],
         ),
         child: Center(
           child: Text(
             'Get Started',
             textAlign: TextAlign.center,
             style: GoogleFonts.josefinSans(
-              fontSize: 20,
+              fontSize: 18,
               fontWeight: FontWeight.w900,
             ),
           ),

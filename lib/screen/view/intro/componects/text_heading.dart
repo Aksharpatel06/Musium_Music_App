@@ -1,22 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:media_booster/utils/color_list.dart';
 
-Column textHeading(double width, double height) {
+Column textHeading(double width, double height,BuildContext context) {
   return Column(
     children: [
       Padding(
         padding: const EdgeInsets.all(12.0),
-        child: Text(
-          'From the latest to the greatest hits, play your favorite tracks onmusium now!',
+        child: RichText(
           textAlign: TextAlign.center,
-          style: GoogleFonts.josefinSans(
-            fontSize: 22,
-            fontWeight: FontWeight.w900,
+          text: TextSpan(
+            text: 'From the ',
+            style: GoogleFonts.josefinSans(
+              fontSize: 25,
+              height:1.5,
+              fontWeight: FontWeight.w900,
+            ),
+            children: <TextSpan>[
+              TextSpan(text: 'latest ', style: TextStyle(fontWeight: FontWeight.bold,color: primaryColor)),
+              const TextSpan(text: 'to the '),
+              TextSpan(text: 'greatest ',style: TextStyle(fontWeight: FontWeight.bold,color: primaryColor)),
+              const TextSpan(text: 'hits, play your favorite tracks on '),
+              TextSpan(text:
+                  'musium ',
+                  style: GoogleFonts.josefinSans(
+                    fontWeight: FontWeight.w900,
+                    color: primaryColor,
+                  ),
+                ),
+              const TextSpan(text: 'now! '),
+            ],
           ),
         ),
       ),
       SizedBox(
-        height: height*0.1,
+        height: height*0.03,
       ),
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -25,7 +43,7 @@ Column textHeading(double width, double height) {
             width: width * 0.2,
             height: height * 0.01,
             decoration: ShapeDecoration(
-              color: const Color(0xFF00C2CB),
+              color:primaryColor,
               shape: RoundedRectangleBorder(
                 side: const BorderSide(
                     width: 1, color: Color(0xFF121111)),

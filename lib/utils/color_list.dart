@@ -1,3 +1,4 @@
-import 'dart:ui';
 
-final primaryColor = Color(0xff5be4e1);
+import 'package:flutter/material.dart';
+
+final primaryColor =Colors.cyanAccent.shade400;
