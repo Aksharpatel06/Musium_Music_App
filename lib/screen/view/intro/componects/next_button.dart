@@ -16,13 +16,6 @@ Widget getNextButton(BuildContext context, double width, double height) {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50),
           ),
-          // shadows:  [
-          //   BoxShadow(
-          //     color: primaryColor,
-          //     blurRadius: 10,
-          //     spreadRadius: 0.50,
-          //   )
-          // ],
         ),
         child: Center(
           child: Text(
