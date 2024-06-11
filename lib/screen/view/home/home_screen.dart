@@ -22,9 +22,9 @@ class HomeScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 homeAppBar(width),
-                continueListings(height, width),
-                topMixes(height, width),
-                recentListning(height, width),
+                continueListings(height, width,context),
+                topMixes(height, width,context),
+                recentListning(height, width,context),
               ],
             ),
           ),

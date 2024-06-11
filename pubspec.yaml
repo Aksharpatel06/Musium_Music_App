@@ -38,6 +38,7 @@ dependencies:
   google_fonts: ^6.2.1
   provider: ^6.1.2
   bordered_text: ^2.0.0
+  assets_audio_player: any
 
 dev_dependencies:
   flutter_test:
@@ -71,6 +72,10 @@ flutter:
     - asset/img/top mixes/
     - asset/img/recent listen/
     - asset/img/intro/
+    - asset/audio/
+    - asset/audio/song/
+    - asset/img/image/
+    - asset/img/audio img/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

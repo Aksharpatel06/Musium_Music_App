@@ -1,11 +1,15 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 import '../../../../utils/global_vaiable.dart';
 import '../../../../utils/top_mixes_list.dart';
 import '../../../modal/continue_modal.dart';
+import '../../../provider/audio_player_provider.dart';
 
-Column topMixes(double height, double width) {
+Column topMixes(double height, double width,BuildContext context) {
+  final audioProvider = Provider.of<AudioPlayerProvider>(context,listen: false);
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -29,30 +33,37 @@ Column topMixes(double height, double width) {
           itemCount: topMixesList.length,
           itemBuilder: (context, index) {
             homeModal = HomeModal.setdata(topMixesList[index]);
-            return Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                children: [
-                  Container(
-                    height: height * 0.2,
-                    width: width * 0.42,
-                    padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      border: Border(bottom: BorderSide(color: homeModal!.color!, width: height * 0.005)),
-                      image: DecorationImage(
-                        image: AssetImage(homeModal!.img),
-                        fit: BoxFit.cover,
+            return CupertinoButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/song');
+                audioProvider.storageAudio(topMixesList,index);
+              },
+              padding: EdgeInsets.zero,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Container(
+                      height: height * 0.2,
+                      width: width * 0.42,
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        border: Border(bottom: BorderSide(color: homeModal!.color!, width: height * 0.005)),
+                        image: DecorationImage(
+                          image: AssetImage(homeModal!.img),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      child: Text(
+                        homeModal!.name,
+                        style: GoogleFonts.josefinSans(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 18,
+                        ),
                       ),
                     ),
-                    child: Text(
-                      homeModal!.name,
-                      style: GoogleFonts.josefinSans(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 18,
-                      ),
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             );
           },

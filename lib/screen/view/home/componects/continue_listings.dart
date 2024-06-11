@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 import '../../../../utils/continue_listings_list.dart';
 import '../../../../utils/global_vaiable.dart';
 import '../../../modal/continue_modal.dart';
+import '../../../provider/audio_player_provider.dart';
 
-Column continueListings(double height, double width) {
+Column continueListings(double height, double width,BuildContext context) {
+  final audioProvider = Provider.of<AudioPlayerProvider>(context,listen: false);
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -34,6 +37,7 @@ Column continueListings(double height, double width) {
           return InkWell(
             onTap: () {
               Navigator.pushNamed(context, '/song');
+              audioProvider.storageAudio(continueList,index);
             },
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 4),
@@ -43,10 +47,10 @@ Column continueListings(double height, double width) {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(8),
                       child: SizedBox(
-                          height: height * 0.08,
+                          height: height * 0.07,
                           child: Image.asset(
                             homeModal!.img,
-                            fit: BoxFit.cover,
+                            fit: BoxFit.fill,
                           )),
                     ),
                     SizedBox(

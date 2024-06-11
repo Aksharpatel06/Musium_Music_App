@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'componects/next_button.dart';
 import 'componects/text_heading.dart';
