@@ -1,17 +1,15 @@
-
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 
 import '../modal/continue_modal.dart';
 
 class AudioPlayerProvider with ChangeNotifier {
-
-  List<HomeModal> homeModalList=[];
-  int audioSongPlayerIndex=0;
+  List<HomeModal> homeModalList = [];
+  int audioSongPlayerIndex = 0;
   final AssetsAudioPlayer _assetsAudioPlayer = AssetsAudioPlayer();
   double _sliderValue = 0.0;
   double _maxDuration = 0.0;
-  bool isplayingsong = false;
+  bool isplayingsong = true;
 
   double get sliderValue => _sliderValue;
 
@@ -21,7 +19,7 @@ class AudioPlayerProvider with ChangeNotifier {
     _openAudio();
   }
 
-  void _openAudio() async {
+  Future<void> _openAudio() async {
     await _assetsAudioPlayer.open(
       Audio(homeModalList[audioSongPlayerIndex].audioName!),
       autoStart: false,
@@ -45,39 +43,41 @@ class AudioPlayerProvider with ChangeNotifier {
 
   void play() {
     _assetsAudioPlayer.play();
-    isplayingsong= false;
     notifyListeners();
   }
 
   void pause() {
     _assetsAudioPlayer.pause();
-    isplayingsong= true;
     notifyListeners();
   }
 
-  void onPlayingSong()
-  {
-    if(isplayingsong)
-      {
-        play();
-      } else{
+  void onPlayingSong() {
+    if (isplayingsong) {
+      play();
+      isplayingsong = !isplayingsong;
+    } else {
       pause();
+      isplayingsong = !isplayingsong;
     }
     notifyListeners();
   }
 
-  void restartSong()
-  {
+  void restartSong() {
     _sliderValue = 0;
     notifyListeners();
   }
 
-  void onPlayingNextSongs()
-  {
-    if(homeModalList.length -1 > audioSongPlayerIndex)
-      {
-        audioSongPlayerIndex++;
-      }
+  void onPlayingNextSongs() {
+    if (homeModalList.length - 1 > audioSongPlayerIndex) {
+      audioSongPlayerIndex++;
+    }
+    notifyListeners();
+  }
+
+  void onPlayingPreviewSongs() {
+    if (audioSongPlayerIndex > 0) {
+      audioSongPlayerIndex--;
+    }
     notifyListeners();
   }
 
@@ -85,8 +85,7 @@ class AudioPlayerProvider with ChangeNotifier {
     _assetsAudioPlayer.seek(Duration(seconds: seconds.toInt()));
   }
 
-  void storageAudio(List listname,int index)
-  {
+  void storageAudio(List listname, int index) {
     audioSongPlayerIndex = index;
     homeModalList.clear();
     for (var item in listname) {

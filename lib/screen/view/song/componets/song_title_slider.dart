@@ -13,10 +13,14 @@ Column songTitleSlider(AudioPlayerProvider audioProvider, double width) {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  audioProvider.homeModalList[audioProvider.audioSongPlayerIndex].name,
-                  style: const TextStyle(
-                      fontSize: 22, fontWeight: FontWeight.bold),
+                SizedBox(
+                  width:width*0.5,
+                  child: Text(
+                    audioProvider.homeModalList[audioProvider.audioSongPlayerIndex].name,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                        fontSize: 22, fontWeight: FontWeight.bold),
+                  ),
                 ),
                 const Text(
                   "Savi Kehlon",

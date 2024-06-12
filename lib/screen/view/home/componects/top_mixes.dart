@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -52,13 +51,6 @@ Column topMixes(double height, double width,BuildContext context) {
                         image: DecorationImage(
                           image: AssetImage(homeModal!.img),
                           fit: BoxFit.cover,
-                        ),
-                      ),
-                      child: Text(
-                        homeModal!.name,
-                        style: GoogleFonts.josefinSans(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 18,
                         ),
                       ),
                     ),

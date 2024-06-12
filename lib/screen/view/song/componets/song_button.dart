@@ -24,7 +24,7 @@ Column songButton(double height, AudioPlayerProvider audioProvider) {
           CupertinoButton(
             padding: EdgeInsets.zero,
             onPressed: () {
-
+              audioProvider.onPlayingPreviewSongs();
             },
             child: const Icon(
               CupertinoIcons.backward_end_fill,
@@ -39,10 +39,13 @@ Column songButton(double height, AudioPlayerProvider audioProvider) {
             child: CircleAvatar(
               radius: 30,
               backgroundColor: primaryColor,
-              child: const Icon(
+              child: (audioProvider.isplayingsong)? const Icon(
                 CupertinoIcons.play_arrow_solid,
                 size: 30,
-              ),
+              ): const Icon(
+                CupertinoIcons.pause,
+                size: 30,
+              )
             ),
           ),
           CupertinoButton(

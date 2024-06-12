@@ -10,6 +10,7 @@ Row homeAppBar(double width) {
         children: [
           const CircleAvatar(
             radius: 22,
+            backgroundImage: AssetImage('asset/img/intro/img.jpg'),
           ),
           SizedBox(
             width: width * 0.05,
@@ -25,7 +26,7 @@ Row homeAppBar(double width) {
                 ),
               ),
               const Text(
-                'Akshar',
+                'Akshar Patel',
                 style: TextStyle(
                   fontWeight: FontWeight.w200,
                   fontSize: 13,
