@@ -19,10 +19,12 @@ class AudioPlayerProvider with ChangeNotifier {
     _openAudio();
   }
 
+  bool isChange = false;
+
   Future<void> _openAudio() async {
     await _assetsAudioPlayer.open(
       Audio(homeModalList[audioSongPlayerIndex].audioName!),
-      autoStart: false,
+      autoStart: isChange ? true:false,
       showNotification: true,
     );
     _assetsAudioPlayer.currentPosition.listen((Duration position) {
@@ -71,6 +73,8 @@ class AudioPlayerProvider with ChangeNotifier {
     if (homeModalList.length - 1 > audioSongPlayerIndex) {
       audioSongPlayerIndex++;
     }
+    isChange = true;
+    _openAudio();
     notifyListeners();
   }
 
@@ -78,6 +82,8 @@ class AudioPlayerProvider with ChangeNotifier {
     if (audioSongPlayerIndex > 0) {
       audioSongPlayerIndex--;
     }
+    isChange = true;
+    _openAudio();
     notifyListeners();
   }
 

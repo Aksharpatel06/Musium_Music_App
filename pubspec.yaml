@@ -68,13 +68,10 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - asset/img/app logo/
-    - asset/img/listen img/
-    - asset/img/top mixes/
     - asset/img/recent listen/
     - asset/img/intro/
     - asset/audio/
     - asset/audio/song/
-    - asset/img/image/
     - asset/img/audio img/
 
   # An image asset can refer to one or more resolution-specific "variants", see
