@@ -113,17 +113,9 @@ class AudioProvider extends ChangeNotifier {
 }
 ```
 
-### 5. Run Your App
-
-Use the terminal to run your app:
-
-```bash
-flutter run
-```
-
 This simple app provides a basic structure for an audio player. The `AudioProvider` class handles the audio logic using the `just_audio` package, while the UI consists of buttons to control the audio playback.
 
-### 6. Expand Functionality
+### 5. Expand Functionality
 
 To build a more comprehensive audio app, you might want to add features like:
 
@@ -192,4 +184,23 @@ ElevatedButton(
 ),
 ```
 
-This example provides a foundation for building a feature-rich audio application using Flutter.
+
+
+### ScreenShort
+
+<p align='center'>
+  <img src='https://github.com/Aksharpatel06/Musium_Music_App/assets/143181114/60228f76-62e9-463f-b8e2-e054c3dd0a7a' width=240>
+  <img src='https://github.com/Aksharpatel06/Musium_Music_App/assets/143181114/bee09cf8-2501-41a9-a8ba-944cab15f39a' width=240>
+  <img src='https://github.com/Aksharpatel06/Musium_Music_App/assets/143181114/051ffba4-a2ae-4f08-8a7c-0bbaa86b7cbe' width=240>
+  <img src='https://github.com/Aksharpatel06/Musium_Music_App/assets/143181114/5cdab139-c84b-482d-ab6b-07fc04faea0a' width=240>
+  <img src='https://github.com/Aksharpatel06/Musium_Music_App/assets/143181114/37c76608-6b15-4423-9527-48fd1f4f223a' width=240>
+  <img src='https://github.com/Aksharpatel06/Musium_Music_App/assets/143181114/4b705ce6-81af-4dca-8e7c-4e2744bfd0af' width=240>
+  <img src='https://github.com/Aksharpatel06/Musium_Music_App/assets/143181114/599ae87b-52ac-4403-a99e-8723f0b93aba' width=240>
+</p>
+
+### Video
+
+
+https://github.com/Aksharpatel06/Musium_Music_App/assets/143181114/ab771758-48ef-411d-8905-cb646c7065b5
+
+
