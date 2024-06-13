@@ -39,7 +39,7 @@ Column songButton(double height, AudioPlayerProvider audioProvider) {
             child: CircleAvatar(
               radius: 30,
               backgroundColor: primaryColor,
-              child: (audioProvider.isplayingsong)? const Icon(
+              child: (audioProvider.isplayingsong )? const Icon(
                 CupertinoIcons.play_arrow_solid,
                 size: 30,
               ): const Icon(

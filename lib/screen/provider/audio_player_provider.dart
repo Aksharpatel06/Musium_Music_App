@@ -56,10 +56,10 @@ class AudioPlayerProvider with ChangeNotifier {
   void onPlayingSong() {
     if (isplayingsong) {
       play();
-      isplayingsong = !isplayingsong;
+      isplayingsong = false;
     } else {
       pause();
-      isplayingsong = !isplayingsong;
+      isplayingsong = true;
     }
     notifyListeners();
   }
