@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:media_booster/screen/provider/audio_player_provider.dart';
 
-Column lyricsTitle(double height) {
+Column lyricsTitle(double height, AudioPlayerProvider audioProvider) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -25,8 +26,8 @@ Column lyricsTitle(double height) {
         height: height * 0.03,
       ),
       Container(
-        height: height*0.32,
-        padding: const EdgeInsets.all(16),
+        width: double.infinity,
+        padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 10),
         decoration: ShapeDecoration(
           gradient: const LinearGradient(
             begin: Alignment(0.00, -1.00),
@@ -42,10 +43,12 @@ Column lyricsTitle(double height) {
           ),
         ),
         child: Text(
-          'You never look at the sky Cause you think it\'s too high You never look at the stars Cause you think they\'re too far But they\'re showing the lights to the way back home When you don\'t know where to go',
+          audioProvider
+              .homeModalList[audioProvider.audioSongPlayerIndex].lyrics!,
+          textAlign: TextAlign.center,
           style: GoogleFonts.josefinSans(
             color: Colors.white,
-            fontSize:22,
+            fontSize: 22,
             fontWeight: FontWeight.w700,
             letterSpacing: 1,
           ),

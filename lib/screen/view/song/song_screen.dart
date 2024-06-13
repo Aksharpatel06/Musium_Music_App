@@ -33,7 +33,7 @@ class _SongScreenState extends State<SongScreen> {
                 songImage(height, audioProvider),
                 songTitleSlider(audioProvider, width),
                 songButton(height,audioProvider),
-                lyricsTitle(height),
+                lyricsTitle(height,audioProvider),
               ],
             ),
           ),
