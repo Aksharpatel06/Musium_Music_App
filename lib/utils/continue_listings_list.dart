@@ -31,7 +31,7 @@ List continueList = [
   },
   {
     'img': 'asset/img/audio img/music7.png',
-    'name': 'Raataan Lambiyan',
+    'name': 'Raataan Lam..',
     'song': 'asset/audio/song/music7.mp3',
     'lyrics': 'Raatan lambiyan lambiyan re\nKate tere sangeyan sangeyan re\nRaataan lambiyan lambiyan re'
   },
