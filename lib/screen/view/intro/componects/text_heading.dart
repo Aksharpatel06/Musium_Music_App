@@ -12,7 +12,7 @@ Column textHeading(double width, double height,BuildContext context) {
           text: TextSpan(
             text: 'From the ',
             style: GoogleFonts.josefinSans(
-              fontSize: 25,
+              fontSize: 29,
               height:1.5,
               fontWeight: FontWeight.w900,
             ),

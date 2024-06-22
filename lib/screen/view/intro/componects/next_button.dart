@@ -22,7 +22,7 @@ Widget getNextButton(BuildContext context, double width, double height) {
             'Get Started',
             textAlign: TextAlign.center,
             style: GoogleFonts.josefinSans(
-              fontSize: 18,
+              fontSize: 22,
               fontWeight: FontWeight.w900,
             ),
           ),

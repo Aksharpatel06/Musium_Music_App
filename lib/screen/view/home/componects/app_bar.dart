@@ -37,7 +37,7 @@ Row homeAppBar(double width) {
         ],
       ),
       SizedBox(
-        width: width*0.3,
+        width: width*0.304,
         child: Row(
           children: [
             const Icon(Icons.equalizer),

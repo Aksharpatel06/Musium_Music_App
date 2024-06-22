@@ -15,10 +15,13 @@ class IntroScreen extends StatelessWidget {
         child: Stack(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 55.0),
-              child: Image.asset(
-                'asset/img/intro/img_girl.png',
-                fit: BoxFit.cover,
+              padding: const EdgeInsets.only(top: 130.0,left: 30),
+              child: SizedBox(
+                height: 400,
+                child: Image.asset(
+                  'asset/img/intro/img_girl.png',
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             Align(

@@ -19,7 +19,7 @@ Column continueListings(double height, double width,BuildContext context) {
         'Continue Listings',
         style: GoogleFonts.josefinSans(
           fontWeight: FontWeight.bold,
-          fontSize: 18,
+          fontSize: 22,
         ),
       ),
       SizedBox(
@@ -76,7 +76,7 @@ GridView countinuePageview(List<dynamic> list, AudioPlayerProvider audioProvider
                     textAlign: TextAlign.start,
                     style: GoogleFonts.josefinSans(
                       fontWeight: FontWeight.w500,
-                      fontSize: 10,
+                      fontSize: 12,
                     ),
                   ),
                 ],

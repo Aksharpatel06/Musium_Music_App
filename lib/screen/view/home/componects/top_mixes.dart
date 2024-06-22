@@ -12,14 +12,12 @@ Column topMixes(double height, double width,BuildContext context) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      SizedBox(
-        height: height * 0.04,
-      ),
+
       Text(
         'Your Top Mixes',
         style: GoogleFonts.josefinSans(
           fontWeight: FontWeight.bold,
-          fontSize: 18,
+          fontSize: 22,
         ),
       ),
       SizedBox(

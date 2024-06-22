@@ -17,7 +17,7 @@ Column recentListning(double height, double width,BuildContext context) {
         'Based on your recent listening',
         style: GoogleFonts.josefinSans(
           fontWeight: FontWeight.bold,
-          fontSize: 18,
+          fontSize: 22,
         ),
       ),
       SizedBox(
